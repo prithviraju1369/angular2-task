@@ -1,0 +1,23 @@
+.card-indv{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.card-align{
+    margin:1em;
+}
+.edit-align{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.label{
+    width: 25%;
+}
+.label-val{
+    width:75%;
+}
+.label-unedit{
+    cursor: pointer;
+}

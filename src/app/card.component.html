@@ -1,0 +1,33 @@
+
+    <div class="card-indv">
+        <div class="card-align"  *ngIf="!card.nameClicked">
+            <div class="label-unedit" (dblclick)="editName()">{{card.name|titlecase}}</div>
+        </div>
+        <div class="card-align edit-align" *ngIf="card.nameClicked">
+            <span class="label"><b>Name :</b></span>
+            <input class="label-val" type="text" (keyup.enter)="onNameEnter($event)" [ngModel]="card.name">
+        </div>
+        <div class="card-align" *ngIf="!card.addressClicked">
+            <div class="label-unedit" (dblclick)="editAddress()">{{card.address|titlecase}}</div>
+        </div>
+        <div class="card-align edit-align" *ngIf="card.addressClicked">
+            <span class="label"><b>Address :</b></span>
+            <input class="label-val" type="text" (keyup.enter)="onAddressEnter($event)" [(ngModel)]="card.address">
+        </div>
+
+        <div class="card-align" *ngIf="!card.emailidClicked">
+            <div class="label-unedit" (dblclick)="editEmailid()">{{card.emailid}}</div>
+        </div>
+        <div class="card-align edit-align" *ngIf="card.emailidClicked">
+            <span class="label"><b>Email :</b></span>
+            <input class="label-val" type="text" (keyup.enter)="onEmailidEnter($event)" [(ngModel)]="card.emailid">
+        </div>
+        <div class="card-align" *ngIf="!card.phoneClicked">
+            <div class="label-unedit" (dblclick)="editPhone()">{{card.phone}}</div>
+        </div>
+        <div class="card-align edit-align" *ngIf="card.phoneClicked">
+            <span class="label"><b>Phone :</b></span>
+            <input class="label-val" type="number" (keyup.enter)="onPhoneEnter($event)" [(ngModel)]="card.phone">
+        </div>
+    </div>
+        
